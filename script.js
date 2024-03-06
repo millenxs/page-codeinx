@@ -21,7 +21,9 @@ document.getElementById('whatsappButton').addEventListener('click', function(){
 });
 
 //typewriter
+// typewriter
 const textEl = document.querySelector(".text");
+const wordsEl = document.querySelector(".words");
 
 const words = ["Parceira Digital", "Inovadora", "Criativa", "Transparente", "Apaixonada"].map((word) => word + ".");
 
@@ -34,61 +36,58 @@ let shouldWait = false;
 let currentWord = words[wordIndex];
 
 const updateCurrWord = () => {
-	wordIndex++;
+  wordIndex++;
 
-	if (wordIndex === words.length) wordIndex = 0;
+  if (wordIndex === words.length) wordIndex = 0;
 
-	currentWord = words[wordIndex];
+  currentWord = words[wordIndex];
 };
 
 const addChar = () => {
-	let currChar = currentWord[charIndex];
+  let currChar = currentWord[charIndex];
 
-	const char = document.createElement("span");
+  const char = document.createElement("span");
+  char.innerText = currChar;
+  char.classList.add("char");
 
-	char.innerText = currChar;
-	char.classList.add("char");
+  wordsEl.appendChild(char);
 
-	textEl.appendChild(char);
+  charIndex++;
 
-	charIndex++;
-
-	if (charIndex === currentWord.length) {
-		charIndex--;
-		addingChars = false;
-		shouldWait = true;
-	}
+  if (charIndex === currentWord.length) {
+    charIndex--;
+    addingChars = false;
+    shouldWait = true;
+  }
 };
 
 const removeChar = () => {
-	const char = textEl.lastElementChild;
+  const char = wordsEl.lastElementChild;
 
-	textEl.removeChild(char);
+  wordsEl.removeChild(char);
 
-	charIndex--;
+  charIndex--;
 
-	if (charIndex < 0) {
-		charIndex++;
-		addingChars = true;
-		updateCurrWord();
-	}
+  if (charIndex < 0) {
+    charIndex++;
+    addingChars = true;
+    updateCurrWord();
+  }
 };
 
 const runTypewriter = () => {
-	const operation = addingChars ? addChar : removeChar;
+  const operation = addingChars ? addChar : removeChar;
 
-	operation();
+  operation();
 
-	let timeout = addingChars ? 200 : 100;
+  let timeout = addingChars ? 200 : 100;
 
-	if (shouldWait) {
-		timeout = 1000;
-		shouldWait = false;
-	}
+  if (shouldWait) {
+    timeout = 1000;
+    shouldWait = false;
+  }
 
-	setTimeout(runTypewriter, timeout);
+  setTimeout(runTypewriter, timeout);
 };
 
 setTimeout(runTypewriter, 1500);
-
-
