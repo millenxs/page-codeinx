@@ -6,16 +6,18 @@
 }
 
 /*				HEADER					*/
-.container h1{
+.container h1 {
 	font-size: 8vh;
-}
-.b-example-divider {
+  }
+
+  .b-example-divider {
 	width: 100%;
 	border: solid rgba(0, 0, 0, .15);
 	border-width: 1px 0;
 	margin-top: 7vh;
-}
-.bebas-neue-regular {
+  }
+
+  .beb2e7as-neue-regular {
 	font-family: "Bebas Neue", sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -35,7 +37,7 @@
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	color:rgb(248, 199, 66);
+	color: rgb(248, 199, 66);
   }
 
   .header-nav {
@@ -52,14 +54,13 @@
 	list-style: none;
 	align-items: center;
 	margin-right: 3vw; /* Ajustado para ser responsivo */
-	font-size: 3vw; /* Ajustado para ser responsivo */
+	font-size: 3vh; /* Ajustado para ser responsivo */
   }
 
   .header-menu-item {
-	font-size: 3vh;
 	margin-left: 1rem;
 	text-decoration: none;
-	color:rgb(248, 199, 66)
+	color: rgb(248, 199, 66) !important; /* Cor dos links */
   }
 
   .header-menu-item:hover {
@@ -69,7 +70,7 @@
   }
 
   @media screen and (max-width: 768px) {
-	.bebas-neue-regular {
+	.beb2e7as-neue-regular {
 	  font-size: 6vw; /* Ajustado para ser responsivo em telas menores */
 	}
 
@@ -84,12 +85,32 @@
 	.header-nav {
 	  justify-content: flex-start; /* Ajusta a posição do logo em telas menores */
 	}
+
+	.dropdown-toggle {
+	  color: white;
+	  text-decoration: none;
+	
+	}
+
+	.dropdown-toggle:hover {
+	  text-decoration: underline;
+	}
+
+	.dropdown-menu .dropdown-item {
+	  color: #2E4A53; /* Cor dos itens do dropdown */
+	}
+
+	.dropdown-menu .dropdown-item:hover {
+	  color: #fff;
+	  background-color: #2E4A53; /* Cor de fundo dos itens do dropdown ao passar o mouse */
+	}
   }
 
 
 
 /*				BOTÃO INICIO				*/
-.button {
+ /* BOTÃO INICIO */
+ .button {
 	width: 30vw; /* Ajustado para ser responsivo */
 	max-width: 150px; /* Limita a largura máxima */
 	height: 6vh; /* Ajustado para ser responsivo */
@@ -136,7 +157,7 @@
 
   /* Layout */
   .layout {
-	margin-top: 10vh; /* Ajustado para ser responsivo */
+	margin-top: 20vh; /* Ajustado para ser responsivo */
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -144,15 +165,16 @@
   }
 
   .layout h1 {
-	font-size: 6vw; /* Ajustado para ser responsivo */
+	font-size: 5vw; /* Ajustado para ser responsivo */
 	margin: 2vh 0; /* Ajustado para ser responsivo */
+	width: auto;
   }
 
   .layout img {
-	width: 40vw; /* Ajustado para ser responsivo */
+	width: 60vw; /* Ajustado para ser responsivo */
 	max-width: 600px; /* Limita a largura máxima */
 	height: auto;
-	margin: 2vh 0; /* Ajustado para ser responsivo */
+	margin: 0vh 25vh; /* Ajustado para ser responsivo */
   }
 
   @media screen and (max-width: 768px) {
@@ -161,11 +183,11 @@
 	}
 
 	.layout {
-	  margin-top: 10vh; /* Ajustado para ser responsivo */
+	  margin-top: 20vh; /* Ajustado para ser responsivo */
 	}
 
 	.layout h1 {
-	  font-size: 6vw; /* Ajustado para ser responsivo em telas menores */
+	  font-size: 9vw; /* Ajustado para ser responsivo em telas menores */
 	  margin: 3vh 0; /* Ajustado para ser responsivo */
 	}
 
@@ -176,7 +198,6 @@
 	  margin: 3vh 0; /* Ajustado para ser responsivo */
 	}
   }
-
 
 
 /*			SOBRE				*/
@@ -223,83 +244,147 @@
 	}
 }
 
+
 /*				Serviços				*/
-.services svg {
-	padding-right: 2vh;
-	color:rgb(248, 199, 66);
+.services {
+	margin-left: 15vh;
+	margin-right: 10vh;
+	margin-top: 5vh;
 }
+
+
+.services h2 {
+    border-bottom: none; /* Remove a linha abaixo do título "Serviços" */
+  }
+
+  .services svg {
+    padding-right: 2vh;
+    color: rgb(248, 199, 66);
+  }
 
   .fade-in {
     opacity: 0;
     animation: fadeIn ease-in-out 1;
     animation-fill-mode: forwards;
     animation-duration: 1s;
-}
+  }
 
-@keyframes fadeIn {
+  @keyframes fadeIn {
     0% {
-        opacity: 0;
+      opacity: 0;
     }
     100% {
-        opacity: 1;
+      opacity: 1;
     }
-}
+  }
+
+  /* Responsividade */
+  @media screen and (max-width: 768px) {
+    .services .row-cols-1,
+    .services .row-cols-sm-2,
+    .services .row-cols-md-3,
+    .services .row-cols-lg-4 {
+      justify-content: center;
+    }
+
+    .services .col {
+      flex: 0 0 90%; /* Largura das colunas ajustada para telas menores */
+      max-width: 90%; /* Largura máxima das colunas ajustada para telas menores */
+      margin-bottom: 20px; /* Espaçamento entre as colunas */
+    }
+
+    .services h2 {
+      font-size: 6vw; /* Tamanho da fonte do título ajustado para telas menores */
+    }
+
+    .services .fs-4 {
+      font-size: 4vw; /* Tamanho da fonte dos parágrafos ajustado para telas menores */
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .services .row-cols-1,
+    .services .row-cols-sm-2,
+    .services .row-cols-md-3,
+    .services .row-cols-lg-4 {
+      justify-content: space-between; /* Itens ocupam mais largura da página */
+    }
+
+    .services .col {
+      flex: 0 0 23%; /* Ajuste da largura das colunas para ocupar mais espaço */
+      max-width: 23%; /* Largura máxima das colunas */
+      margin-bottom: 20px; /* Espaçamento entre as colunas */
+    }
+  }
+
 
 /*			CONTATO			*/
-.contact  {
-	margin-top: 5vh;
-	margin-bottom: 5vh;
+.contact {
+  margin-top: 5vh;
+  margin-bottom: 30vh;
+}
+
+.text,
+.words,
+.cursor {
+  margin-top: 4vh;
+  display: inline-block;
+  justify-content: center;
+  letter-spacing: 0.2rem;
+  color: rgb(19, 19, 19);
+  line-height: 10vh;
+  width: 100%;
+}
+
+.char {
+  color: rgb(248, 199, 66);
+}
+
+.words,
+.cursor {
+  animation: blink 0.5s step-end infinite alternate;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+    color: transparent;
   }
-  
-  .text, .words, .cursor {
-	margin-top: 6vh;
-	margin-left: 2vh;
-	display: inline-block;
-	justify-content: center;
-	letter-spacing: 0.2rem;
-	color: rgb(19, 19, 19);
-	line-height: 2vh;
-  }
-  
-  .char {
-	color: rgb(248, 199, 66);
-  }
-  
-  .words, .cursor {
-	animation: blink 0.5s step-end infinite alternate;
-  }
-  
-  @keyframes blink {
-	50% {
-	  border-color: transparent;
-	  color: transparent;
-	}
-  }
+}
 
 @media (min-width: 600px) {
-	.text, .words, .cursor {
-		font-size: 6vh;
-	}
+  .text,
+  .words,
+  .cursor {
+    font-size: 6vh;
+  }
 }
 
 @media (min-width: 900px) {
-	.text, .words, .cursor {
-		font-size: 8vh;
-	}
+  .text,
+  .words,
+  .cursor {
+    font-size: 8vh;
+  }
 }
 
 @media (min-width: 1200px) {
-	.text, .words, .cursor {
-		font-size: 11vh;
-	}
+  .text,
+  .words,
+  .cursor {
+    font-size: 11vh;
+  }
 }
 
 @media (min-width: 1600px) {
-	.text, .words, .cursor {
-		font-size: 14vh;
-	}
+  .text,
+  .words,
+  .cursor {
+    font-size: 14vh;
+  }
 }
 
+/* 		Botão de Contato		 */
 /*				BOTÃO CONTATO				*/
 .email, .wpp{
 	margin-top: 10vh;

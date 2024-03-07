@@ -6,44 +6,70 @@
     <title>CodeInx</title>
 	<link rel="stylesheet" href="style.css" class="css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	
-	<script src="script.js" defer></script>
 </head>
   <body>
 
-		<div class="container py-4">
-			<header class="d-flex flex-wrap py-3 mb-4 fixed-top header-nav">
-			  <div class="col-md-4 mb-2 mb-md-0">
-				<a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-				  <h1 class="ic">Code</h1><h1 class="on">Inx</h1>
-				</a>
-			  </div>
-				  
-			  <ul class="nav col-8 col-md-auto mb-2 justify-content-center mb-md-0 header-menu">
-				<li><a href="#section1" class="header-menu-item">Inicio</a></li>
-					<li><a href="#section2" class="header-menu-item">About</a></li>
-					<li><a href="#section3" class="header-menu-item">Serviços</a></li>
-					<li><a href="#section4" class="header-menu-item">Contato</a></li>
-			 </ul>
-			</header>
-		 </div>
 
+	<div class="container py-4">
+		<header class="d-flex flex-wrap py-3 mb-4 fixed-top header-nav">
+		  <div class="col-md-4 mb-2 mb-md-0">
+			<a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+			  <h1 class="ic">Code</h1><h1 class="on">Inx</h1>
+			</a>
+		  </div>
+	  
+		  <div class="col-8 col-md-auto mb-2 justify-content-center mb-md-0 header-menu">
+			<ul class="nav">
+			  <li class="nav-item">
+				<a class="nav-link header-menu-item" href="#section1">Inicio</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link header-menu-item" href="#section2">About</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link header-menu-item" href="#section3">Serviços</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link header-menu-item" href="#section4">Contato</a>
+			  </li>
+			</ul>
+		  </div>
+	  
+		  <!-- Dropdown para telas menores -->
+		  <div class="dropdown col-4 d-md-none">
+			<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+				<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+				  </svg>
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			  <li><a class="dropdown-item" href="#section1">Inicio</a></li>
+			  <li><a class="dropdown-item" href="#section2">About</a></li>
+			  <li><a class="dropdown-item" href="#section3">Serviços</a></li>
+			  <li><a class="dropdown-item" href="#section4">Contato</a></li>
+			</ul>
+		  </div>
+		</header>
+	  </div>
 
-  <section class="layout fade-in">
-	<div class="row justify-content-center"  id="section1">
-		<div class="col-md-4">
+	  <section class="layout fade-in" id="section1">
+		<div class="row justify-content-center">
+		  <div class="col-md-4">
 			<h1 class="bebas-neue-regular fade-in">Sua empresa online, crescendo a cada clique.</h1>
-
-			<a href="#section2" style="text-decoration: none;"><button class="button">
-				<svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
-			   Saiba Mais
-			</button></a>
-		</div>
-    	<div class="col-6">
+			<a href="#section2" style="text-decoration: none;">
+			  <button class="button">
+				<svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+				  <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path>
+				</svg>
+				Saiba Mais
+			  </button>
+			</a>
+		  </div>
+		  <div class="col-md-6">
 			<img src="/assets/040e1f41-d7be-4382-ac0b-050d01617316.jpg" alt="" class="src img-fluid" width="600" height="400">
+		  </div>
 		</div>
-		</div>
-  </section>
+	  </section>
 
 
  	<div class="b-example-divider"></div>
@@ -102,130 +128,119 @@
 
 	  <div class="b-example-divider"></div>
 
-	<section class="services"  id="section3">
-		<div class="container px-4 py-5" id="icon-grid">
-			<h2 class="pb-2 border-bottom fade-in">Serviços</h2>
-		
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-			  <div class="col d-flex align-items-start">
-				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="fade-in bi bi-building" viewBox="0 0 16 16">
-					<path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
-					<path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z"/>
-				  </svg>				
-				  <div>
-				  <h3 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Sites institucionais</h3>
-				  <p class="fade-in">Apresentação da empresa, seus produtos e serviços.</p>
-				</div>
+		<div class="services " id="icon-grid section3">
+		  <h2 class="pb-2 fade-in">Serviços</h2>
+	  
+		  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+			<div class="col d-flex align-items-start">
+			  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="fade-in bi bi-building" viewBox="0 0 16 16">
+				<path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+				<path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z"/>
+			  </svg>
+			  <div>
+				<h2 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Sites institucionais</h2>
+				<p class="fade-in">Apresentação da empresa, seus produtos e serviços.</p>
 			  </div>
+			</div>
 			  <div class="col d-flex align-items-start">
-				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="fade-in bi bi-bag" viewBox="0 0 16 16">
+				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="fade-in bi bi-bag" viewBox="0 0 16 16">
 					<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
 				  </svg>				
 				  <div>
-				  <h3 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Sites e-commerce</h3>
+				  <h2 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Sites e-commerce</h2>
 				  <p class="fade-in">Venda de produtos online.</p>
 				</div>
 			  </div>
 			  <div class="col d-flex align-items-start">
-				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="fade-in bi bi-substack" viewBox="0 0 16 16">
+				<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="fade-in bi bi-substack" viewBox="0 0 16 16">
 					<path d="M15 3.604H1v1.891h14v-1.89ZM1 7.208V16l7-3.926L15 16V7.208zM15 0H1v1.89h14z"/>
 				  </svg>				
 				  <div>
-				  <h3 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Blogs</h3>
+				  <h2 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Blogs</h2>
 				  <p class="fade-in">Conteúdo informativo e relevante para o público-alvo.</p>
 				</div>
 			  </div>
 			  <div class="col d-flex align-items-start">
-				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="fade-in bi bi-file-break" viewBox="0 0 16 16">
+				<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="fade-in bi bi-file-break" viewBox="0 0 16 16">
 					<path d="M0 10.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5M12 0H4a2 2 0 0 0-2 2v7h1V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v7h1V2a2 2 0 0 0-2-2m2 12h-1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2H2v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2z"/>
 				  </svg>
 				  <div>
-				  <h3 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Landing pages</h3>
+				  <h2 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Landing pages</h2>
 				  <p class="fade-in">Captação de leads e conversão de visitantes.</p>
 				</div>
 			  </div>
 			  <div class="col d-flex align-items-start">
-				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="fade-in bi bi-file-earmark-person" viewBox="0 0 16 16">
+				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="fade-in bi bi-file-earmark-person" viewBox="0 0 16 16">
 					<path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
 					<path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5z"/>
 				  </svg>				
 				  <div>
-				  <h3 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Portfólios online</h3>
+				  <h2 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Portfólios online</h2>
 				  <p class="fade-in">Exposição de trabalhos e projetos</p>
 				</div>
 			  </div>
 			  <div class="col d-flex align-items-start">
-				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="fade-in bi bi-calendar-event" viewBox="0 0 16 16">
+				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="fade-in bi bi-calendar-event" viewBox="0 0 16 16">
 					<path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
 					<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
 				  </svg>				
 				  <div>
-				  <h3 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Sites para eventos</h3>
+				  <h2 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Sites para eventos</h2>
 				  <p class="fade-in">Divulgação e inscrição em eventos.</p>
 				</div>
 			  </div>
 			  <div class="col d-flex align-items-start">
-				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="fade-in bi bi-highlighter" viewBox="0 0 16 16">
+				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="fade-in bi bi-highlighter" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M11.096.644a2 2 0 0 1 2.791.036l1.433 1.433a2 2 0 0 1 .035 2.791l-.413.435-8.07 8.995a.5.5 0 0 1-.372.166h-3a.5.5 0 0 1-.234-.058l-.412.412A.5.5 0 0 1 2.5 15h-2a.5.5 0 0 1-.354-.854l1.412-1.412A.5.5 0 0 1 1.5 12.5v-3a.5.5 0 0 1 .166-.372l8.995-8.07zm-.115 1.47L2.727 9.52l3.753 3.753 7.406-8.254zm3.585 2.17.064-.068a1 1 0 0 0-.017-1.396L13.18 1.387a1 1 0 0 0-1.396-.018l-.068.065zM5.293 13.5 2.5 10.707v1.586L3.707 13.5z"/>
 				  </svg>				
 				  <div>
-				  <h3 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Sites para cursos online</h3>
+				  <h2 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Sites para cursos online</h2>
 				  <p class="fade-in">EAD e venda de cursos online.</p>
 				</div>
 			  </div>
 			  <div class="col d-flex align-items-start">
-				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="fade-in bi bi-laptop" viewBox="0 0 16 16">
+				<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="fade-in bi bi-laptop" viewBox="0 0 16 16">
 					<path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
 				  </svg>				
 				  <div>
-				  <h3 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Aplicativos web</h3>
+				  <h2 class="fw-bold mb-0 fs-4 text-body-emphasis fade-in">Aplicativos web</h2>
 				  <p class="fade-in">Ferramentas personalizadas para a empresa.</p>
 				</div>
 			  </div>
 			</div>
 		  </div>
 
-	</section>
-
 	<div class="b-example-divider"></div>
 
 	<section id="section4" class="contact">
 		<div class="row">
-			<div class="col-sm-5 col-md-6 fade-in" style="margin-top: 13vh; padding-left: 6vh;">
-				<h1 class="text">CodeInx é&nbsp;</h1>
-				<div class="typewriter">
-					<span class="words"></span>
-					<span class="cursor"></span>
-				  </div>
-			</div>
-
-			<div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">				
-				<h1 class="display-5 fade-in" style="font-size: 70px; margin-right: 3vh;">Transforme seu futuro, transforme seu negócio.</h1>
-					<div class="row">
-						<div class="col-6 col-sm-3 fade-in">
-							<button class="email" id="emailButton">
-								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope svg-icon" viewBox="0 0 16 16">
-									<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-								  </svg>
-									<span class="lable">Enviar Email</span>
-								  </button>
-						</div>
-						<div class="col-6 col-sm-3 fade-in">
-							<button class="wpp" id="whatsappButton">
-								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp svg-icon" viewBox="0 0 16 16">
-								  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-								</svg>
-								  <span class="lable">Enviar Mensagem no Whatsapp</span>
-								</button>
-								<p id="message"></p>
-						</div>
-
-					</div>
-
-
-
+		  <div class="col-sm-6 fade-in" style="margin-top: 13vh; padding-left: 6vh;">
+			<h1 class="text">CodeInx é&nbsp;</h1>
+			<div class="typewriter">
+			  <span class="words"></span>
+			  <span class="cursor"></span>
 			</div>
 		  </div>
+	  
+		  <div class="col-sm-6">
+			<h1 class="display-5 fade-in" style="font-size: 70px; margin-right: 3vh;">Transforme seu futuro, transforme seu negócio.</h1>
+			<div class="buttons-contact">
+			  <button class="buttonep email" id="emailButton">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope svg-icon" viewBox="0 0 16 16">
+				  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+				</svg>
+				<span class="label">Enviar Email</span>
+			  </button>
+			  <button class="buttonep wpp" id="whatsappButton">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp svg-icon" viewBox="0 0 16 16">
+				  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+				</svg>
+				<span class="label">Enviar Mensagem no Whatsapp</span>
+			  </button>
+			  <p id="message"></p>
+			</div>
+		  </div>
+		</div>
 	  </section>
 
 	  <div class="b-example-divider"></div>
@@ -234,7 +249,7 @@
 		<p>Copyright &copy; 2024 CodeInx | Desenvolvimento Web</p>
 	</footer>
 
-
+	<script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
